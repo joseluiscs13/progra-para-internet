@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Blog Rojiblanco</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <h1>Blog Rojiblanco</h1>
+    <p style="text-align: center;">
+      <img src="Img/chiva.png" width="200">
+    </p>
+    <nav>
+      <a href="index.html">Blog</a> 
+      <a href="about.html">About me</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>¡Hola! Soy José Luis Camarena Sandoval</h2>
+      <p style="text-align: center;">
+        <img src="Img/My_image.jpg" alt="Javier Hernández" width="200">
+      </p>
+      <p>
+        ¡Te doy la bienvenida a mi blog! Soy estudiante de ingeniería informática en la UDG y un apasionado del fútbol desde mi infancia. Siempre he sido un ferviente seguidor de las Chivas, el club de mis amores.  </p>
+      <p>
+        En este espacio, compartiré noticias fascinantes sobre el Club Deportivo Guadalajara. ¡Espero que las disfrutes tanto como yo!
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 José Luis Camarena Sandoval</p>
+  </footer>
+
+  <script>
+    // Script para expandir y contraer contenido
+    document.addEventListener('DOMContentLoaded', function () {
+      const details = document.querySelectorAll('.details');
+
+      details.forEach(detail => {
+        detail.addEventListener('click', function () {
+          this.classList.toggle('active');
+          const paragraph = this.nextElementSibling;
+          // Buscar el siguiente elemento <p> dentro del .details
+          const content = this.querySelector('p');
+          if (content) {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

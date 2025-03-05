@@ -1,0 +1,12 @@
+
+.bg-rosa {
+    background-color: #e50188 !important;
+}
+body {
+    margin-bottom: 100px; /* Ajuste para evitar que el footer se superponga al contenido */
+    margin-bottom: 0; /* Ajuste para evitar el espacio en blanco debajo del footer */
+    overflow-x: hidden; /* Evita el deslizamiento horizontal */
+}
+footer {
+    width: 200%;
+}

@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #3498db;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    text-align: center;
+  }
+  
+  label {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: #3498db;
+  }
+  
+  input {
+    padding: 8px;
+    font-size: 1em;
+  }
+  
+  .guessSubmit {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .guessSubmit:hover {
+    background-color: #2980b9;
+  }
+  
+  .resultParas {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .lastResult {
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .lastResult.correct {
+    background-color: #2ecc71;
+  }
+  
+  .lastResult.incorrect {
+    background-color: #e74c3c;
+  }
+  
+  .lowOrHi {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  header {
+    text-align: center;
+    background-color: wheat;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .banner-link {
+    display: block;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px; 
+    margin-top: 20px;
+  }
+  
+  
