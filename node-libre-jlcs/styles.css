@@ -1,0 +1,66 @@
+/* styles.css */
+
+body {
+  background-image: url('hoja.jpg'); /* Ajusta la ruta de la imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; /* Para mantener la imagen fija mientras se desplaza */
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 200, 0.8); /* Fondo amarillo light semi-transparente */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #000000; 
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffe600; /* Fondo amarillo para la tabla */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 8px;
+}
+
+button {
+  padding: 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.completed-task span {
+  text-decoration: line-through; /* Tachado para indicar tarea completada */
+}
+

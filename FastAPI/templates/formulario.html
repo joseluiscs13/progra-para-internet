@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario">
+        <h1>Trabajador</h1>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required>
+
+        <label for="descripcion">Descripción:</label>
+        <input type="text" name="descripcion">
+
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" required>
+
+        <label for="impuestos">Impuestos:</label>
+        <input type="number" name="impuestos">
+
+        <button type="button" onclick="enviarFormulario()">Enviar formulario</button>
+    </form>
+
+    <!-- Elemento para mostrar el mensaje -->
+    <div id="resultado"></div>
+
+    <script>
+        async function enviarFormulario() {
+            const formulario = document.getElementById('formulario');
+            const formData = new FormData(formulario);
+            const jsonData = {};
+            
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+            });
+
+            const response = await fetch('/procesar_formulario/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(jsonData),
+            });
+
+            const data = await response.json();
+
+            // Actualizar el elemento con el mensaje recibido del servidor
+            const resultadoElemento = document.getElementById('resultado');
+            resultadoElemento.innerHTML = `<p>${data.mensaje}</p><p>${JSON.stringify(data.item)}</p>`;
+        }
+    </script>
+</body>
+</html>
+
+
+
+

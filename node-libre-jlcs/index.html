@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArmaTareas.com</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container text-center">
+    <h1 class="mt-4">ArmaTareas</h1>
+    
+    <!-- Imagen debajo del título -->
+    <img src="logo.jpeg" alt="Imagen de Tareas" class="mx-auto d-block mb-3" style="width: 200px; height: 200px;">
+    <p>Haz doble clic en una tarea para editarla.</p>
+
+
+    <!-- Formulario para agregar tareas -->
+    <form id="taskForm" class="d-inline-block">
+      <div class="form-group">
+        <input type="text" class="form-control" id="taskInput" placeholder="Nueva tarea" style="width: 300px;">
+      </div>
+      <button type="button" class="btn btn-success" onclick="addTask()">Agregar Tarea</button>
+      <button type="button" class="btn btn-danger" onclick="clearTasks()">Vaciar Lista</button>
+    </form>
+
+    <!-- Lista de tareas -->
+    <ul id="tasksList" class="list-group mt-4">
+      <!-- Las tareas se agregarán dinámicamente aquí -->
+    </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
